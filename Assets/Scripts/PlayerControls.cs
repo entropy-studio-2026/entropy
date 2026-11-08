@@ -1,4 +1,3 @@
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerControls : MonoBehaviour
@@ -12,11 +11,9 @@ public class PlayerControls : MonoBehaviour
     [SerializeField] float moveHorizontal;
     [SerializeField] float moveVertical;
     [SerializeField] float speed = 4;
-    [SerializeField] float rotateSpeed = 4;
+    [SerializeField] float rotateSpeed = 3;
     [SerializeField] float jumpHeight = 1.2f;
     [SerializeField] bool isjumping;
-
-
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
