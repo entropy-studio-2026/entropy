@@ -7,7 +7,6 @@ public class PlayerInteraction : MonoBehaviour
     [SerializeField, Min(0.1f)] float interactionDistance = 2f;
     [SerializeField] LayerMask interactionLayers = ~0;
     [SerializeField] KeyCode interactionKey = KeyCode.E;
-    [SerializeField] bool showScreenPrompt = true;
 
     Interactable currentTarget;
     string message;
@@ -73,9 +72,6 @@ public class PlayerInteraction : MonoBehaviour
 
     void OnGUI()
     {
-        if (!showScreenPrompt)
-            return;
-
         string text = Time.unscaledTime < messageUntil ? message : CurrentPrompt;
         if (string.IsNullOrEmpty(text))
             return;
