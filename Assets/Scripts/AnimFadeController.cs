@@ -4,16 +4,17 @@ using UnityEngine;
 public class AnimFadeController : MonoBehaviour
 {
     [SerializeField] GameObject fadeOutImage;
-    [SerializeField]  GameObject fadeInImage;
-    public float animDuration = 1.0f;
+    [SerializeField] GameObject fadeInImage;
+    [SerializeField] float animDuration = 1.0f;
 
     public void FadeIn()
     {
         StartCoroutine(PlayFadeIn());
     }
-    public void FadeOut(string sceneName)
+
+    public void FadeOut()
     {
-        StartCoroutine(PlayFadeOut(sceneName));
+        fadeOutImage.SetActive(true);
     }
 
     private IEnumerator PlayFadeIn()
@@ -21,10 +22,5 @@ public class AnimFadeController : MonoBehaviour
         fadeInImage.SetActive(true);
         yield return new WaitForSeconds(animDuration);
         fadeInImage.SetActive(false);
-    }
-    private IEnumerator PlayFadeOut(string sceneName)
-    {
-        fadeOutImage.SetActive(true);
-        yield return new WaitForSeconds(animDuration);
     }
 }
