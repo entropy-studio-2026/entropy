@@ -9,6 +9,8 @@ public class DoorController : Interactable
     [SerializeField] float openAngle = 90f;
     [SerializeField, Min(0.01f)] float openDuration = 0.8f;
 
+    [SerializeField] AudioSource openSound;
+
     bool opened;
     bool opening;
 
@@ -33,6 +35,9 @@ public class DoorController : Interactable
         }
 
         opening = true;
+        if (openSound != null)
+            openSound.Play();
+
         player.ShowMessage($"已使用{requiredKeyName}，正在开门");
         StartCoroutine(OpenDoor());
     }
