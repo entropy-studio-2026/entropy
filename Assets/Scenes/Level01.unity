@@ -1633,6 +1633,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::RunningAduio
   footstepAudio: {fileID: 1509353050}
   moveKey: 119
+--- !u!4 &530349038 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8893002853852636306, guid: 16e5da8e20b493a489dde293214e6117, type: 3}
+  m_PrefabInstance: {fileID: 829277072263649480}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &559106120 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8489881514211139485, guid: 9b80b3ea774801348886b25f89649288, type: 3}
@@ -5945,6 +5950,14 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 4238507350307900191, guid: 16e5da8e20b493a489dde293214e6117, type: 3}
+      propertyPath: jumpHeight
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4238507350307900191, guid: 16e5da8e20b493a489dde293214e6117, type: 3}
+      propertyPath: viewCamera
+      value: 
+      objectReference: {fileID: 530349038}
     - target: {fileID: 4238507350307900191, guid: 16e5da8e20b493a489dde293214e6117, type: 3}
       propertyPath: rotateSpeed
       value: 3

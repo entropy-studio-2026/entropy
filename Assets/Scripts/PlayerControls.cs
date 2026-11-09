@@ -15,7 +15,7 @@ public class PlayerControls : MonoBehaviour
     [SerializeField, Range(-89f, 0f)] float minPitch = -75f;
     [SerializeField, Range(0f, 89f)] float maxPitch = 75f;
 
-    [SerializeField] float jumpHeight = 1.2f;
+    [SerializeField] float jumpHeight = 0.8f;
     [SerializeField] bool isjumping;
 
     float cameraPitch;
@@ -50,7 +50,7 @@ public class PlayerControls : MonoBehaviour
         {
             isjumping = true;
             activeChar.GetComponent<Animator>().Play("Jump");
-            verticalVelocity = 10f;
+            verticalVelocity = Mathf.Sqrt(jumpHeight * -2f * gravityValue);
         }
 
         verticalVelocity += gravityValue * Time.deltaTime;
