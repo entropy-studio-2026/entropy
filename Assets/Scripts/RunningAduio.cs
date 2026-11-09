@@ -6,10 +6,6 @@ public class RunningAduio : MonoBehaviour
     [Tooltip("脚步声素材。留空不会播放。")]
     [SerializeField] AudioSource footstepAudio;
 
-    [Header("触发")]
-    [Tooltip("按住这个键才播放，默认 W。")]
-    [SerializeField] KeyCode moveKey = KeyCode.W;
-
     CharacterController controller;
 
     void Awake()
@@ -21,13 +17,14 @@ public class RunningAduio : MonoBehaviour
     {
         if (footstepAudio == null) return;
 
-        if (!Input.GetKey(moveKey))
+        bool moving = Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A)
+            || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D);
+
+        if (!moving || (controller != null && !controller.isGrounded))
         {
             if (footstepAudio.isPlaying) footstepAudio.Stop();
             return;
         }
-
-        if (controller != null && !controller.isGrounded) return;
 
         if (footstepAudio.clip == null) return;
         if (footstepAudio.isPlaying) return;
