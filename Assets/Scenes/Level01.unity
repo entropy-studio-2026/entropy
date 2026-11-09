@@ -2026,6 +2026,7 @@ MonoBehaviour:
   hinge: {fileID: 109120192}
   openAngle: 90
   openDuration: 0.8
+  openSound: {fileID: 1046290845}
 --- !u!65 &778619648
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5981,15 +5982,15 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 8334780068951558594, guid: 16e5da8e20b493a489dde293214e6117, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 530349037}
     - targetCorrespondingSourceObject: {fileID: 424685766033540488, guid: 16e5da8e20b493a489dde293214e6117, type: 3}
       insertIndex: -1
       addedObject: {fileID: 829277072263649483}
     - targetCorrespondingSourceObject: {fileID: 424685766033540488, guid: 16e5da8e20b493a489dde293214e6117, type: 3}
       insertIndex: -1
       addedObject: {fileID: 829277072263649482}
+    - targetCorrespondingSourceObject: {fileID: 8334780068951558594, guid: 16e5da8e20b493a489dde293214e6117, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 530349037}
   m_SourcePrefab: {fileID: 100100000, guid: 16e5da8e20b493a489dde293214e6117, type: 3}
 --- !u!1 &829277072263649481 stripped
 GameObject:
@@ -6014,7 +6015,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   interactionKey: 101
-  showScreenPrompt: 1
 --- !u!114 &829277072263649483
 MonoBehaviour:
   m_ObjectHideFlags: 0
