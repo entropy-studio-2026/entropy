@@ -3108,6 +3108,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::KeyPickup
   keyId: main_door
   displayName: "\u94A5\u5319"
+  pickupClip: {fileID: 8300000, guid: aed0ecf3ce66ba74b8cb4e301b0969c0, type: 3}
+  pickupVolume: 1
 --- !u!65 &1266842412
 BoxCollider:
   m_ObjectHideFlags: 0
