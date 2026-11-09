@@ -1553,6 +1553,73 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9b80b3ea774801348886b25f89649288, type: 3}
+--- !u!1 &569964970
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 569964973}
+  - component: {fileID: 569964972}
+  - component: {fileID: 569964971}
+  m_Layer: 0
+  m_Name: ExitTrigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &569964971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 569964970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8dd92cb7eb24b559a541de26e25fe19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ExitFadeTrigger
+  fadeController: {fileID: 2009298640}
+--- !u!65 &569964972
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 569964970}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!4 &569964973
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 569964970}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -19.207, y: 1.942, z: 22.453}
+  m_LocalScale: {x: 1.531, y: 3, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &575574181
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4907,6 +4974,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8489881514211139485, guid: 9b80b3ea774801348886b25f89649288, type: 3}
   m_PrefabInstance: {fileID: 1305361497}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2009298640 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 940438747774627722, guid: 655657ae33404c34c9e8aa04f22abb5e, type: 3}
+  m_PrefabInstance: {fileID: 1085974882645154886}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5999e6432f5db24e8ab8f60a8d4cc06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AnimFadeController
 --- !u!1001 &2015336549
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5188,6 +5266,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2124724806}
+  - component: {fileID: 2124724807}
   m_Layer: 0
   m_Name: LevelControls
   m_TagString: Untagged
@@ -5211,6 +5290,19 @@ Transform:
   - {fileID: 1220965106}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2124724807
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2124724805}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d63e733bab4643479ce426a69fa1e230, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LevelController
+  fadeController: {fileID: 2009298640}
 --- !u!1001 &2125469748
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6267,6 +6359,7 @@ SceneRoots:
   m_Roots:
   - {fileID: 410087041}
   - {fileID: 832575519}
+  - {fileID: 569964973}
   - {fileID: 2124724806}
   - {fileID: 829277072263649480}
   - {fileID: 906816680}
